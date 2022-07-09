@@ -1,0 +1,39 @@
+---
+title: "Yu-Yuan Chang final R code"
+author: "Yu-Yuan Chang"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: paper
+    code_folding: show
+    df_print: paged
+    tidy: yes
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+bibliography: citations.bib
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo    = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      comment = "")
+```
+
+
+## Final r code
+```{r}
+carsTrain <- read.csv("carsTrain.csv")
+carsTestNoY <- read.csv("carsTestNoY.csv")
+attach(carsTrain)
+
+lm(formula = PriceNew^0.2331 ~ Horsepower + Fuel.tank.capacity + Manufacturer +   AirBags + Fuel.tank.capacity:AirBags, data = carsTrain)
+```
+
+
+

@@ -1,0 +1,1 @@
+lm(formula = PriceNew^0.2331 ~ Horsepower + Fuel.tank.capacity + Manufacturer +   AirBags + Fuel.tank.capacity:AirBags, data = carsTrain)
